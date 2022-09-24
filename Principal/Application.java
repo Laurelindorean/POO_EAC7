@@ -1,11 +1,10 @@
 package Principal;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 import locals.ParadaG;
 import locals.PuntInformacio;
 import locals.ParadaV;
-
 
 public class Application {
 
