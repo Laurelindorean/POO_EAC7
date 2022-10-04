@@ -1,9 +1,18 @@
+/*
+ *Classe que defineix un punt d’informació del mercat. Es defineixen pel seu codi, 
+ *nom de la persona responsable, any actual i quantitat de persones que han demanat
+ *informació des de l'inici de l'any actual.
+ */
 package locals;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author Palmira
+ */
 public class PuntInformacio {
-	
+
 	private static final Scanner DADES = new Scanner(System.in);
 	private String codi;
 	private String nomResponsable;
@@ -80,8 +89,8 @@ public class PuntInformacio {
 		int quantitatPersones;
 		System.out.println("Introdueix el codi");
 		codi = DADES.next();
-		System.out.println("Introdueix el nom del responsable");
 		DADES.nextLine();
+		System.out.println("Introdueix el nom del responsable");
 		nomResponsable = DADES.nextLine();
 		System.out.println("Introdueix l'any actual");
 		anyActual = DADES.nextInt();
@@ -115,6 +124,9 @@ public class PuntInformacio {
 		System.out.println("L'any actual es " + anyActual);
 		System.out.println("Introdueix el nou any");
 		anyActual = DADES.nextInt();
+		System.out.println("Actualment hi han " + quantitatPersones + " persones");
+		System.out.println("Introdueix el nou nombre de persones");
+		quantitatPersones = DADES.nextInt();
 
 	}
 

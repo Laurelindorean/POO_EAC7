@@ -1,9 +1,16 @@
+/*
+* Classe que defineix una parada gastronòmica del mercat. Es defineixen pel seu 
+* codi, nom, tipus de productes que ofereix i si té taules per menjar o no.
+ */
 package locals;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author Palmira
+ */
 public class ParadaG {
-
 	private static final Scanner DADES = new Scanner(System.in);
 	private String codi;
 	private String nom;
@@ -83,7 +90,7 @@ public class ParadaG {
 		String tipus;
 		boolean teTaula = true;
 		String resposta;
-
+		
 		System.out.println("Introdueix el codi de la Parada Gastronòmica");
 		codi = DADES.next();
 		System.out.println("Introdueix el nom de la Parada Gastronòmica");
@@ -121,13 +128,13 @@ public class ParadaG {
 	 */
 	public void updateParadaG() {
 		String resposta;
-
+		
 		System.out.println("El codi actual de la Parada Gastronòmica es " + codi);
 		System.out.println("Introdueix el nou codi de la Parada Gastronòmica");
 		codi = DADES.next();
+		DADES.nextLine();
 		System.out.println("El nom de la Parada Gastronòmica es " + nom);
 		System.out.println("Introdueix el nou nom de la Parada Gastronòmica");
-		DADES.nextLine();
 		nom = DADES.nextLine();
 		if (teTaula) {
 			resposta = "Si";

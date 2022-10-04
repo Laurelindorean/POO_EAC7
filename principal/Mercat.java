@@ -1,12 +1,23 @@
-package Principal;
+/*
+ * Classe que defineix un mercat. Un mercat es defineix pel seu codi, nom, adreça, 
+ * un array de punts d’informació, un array de parades gastronòmiques i un array de parades de venda.
+ */
+package principal;
+
+import locals.PuntInformacio;
+import locals.ParadaG;
+import locals.ParadaV;
 
 import java.util.Scanner;
 
-import locals.ParadaG;
-import locals.ParadaV;
-import locals.PuntInformacio;
+//import locals.ParadaG;
 
+/**
+ *
+ * @author Palmira
+ */
 public class Mercat {
+
 	private static final Scanner DADES = new Scanner(System.in);
 	private int codi;
 	private static int codiSeguent = 0;
@@ -125,7 +136,7 @@ public class Mercat {
 	 */
 	public static Mercat addMercat() {
 		String nom, adreca;
-
+		
 		System.out.println("Introdueix el nom del Mercat");
 		nom = DADES.nextLine();
 		System.out.println("Introdueix l'adreça del Mercat");
@@ -148,7 +159,7 @@ public class Mercat {
 	 * Retorn: cap
 	 */
 	public void updateMercat() {
-
+		
 		System.out.println("El nom del Mercat es " + nom);
 		System.out.println("Introdueix el nou nom del Mercat");
 		nom = DADES.nextLine();
@@ -236,7 +247,7 @@ public class Mercat {
 	}
 
 	public int selectParadaV(String codi) {
-
+		
 		if (codi == null) {
 			System.out.println("\nCodi de la parada de venda?:");
 			codi = DADES.next();
@@ -281,7 +292,7 @@ public class Mercat {
 	}
 
 	public int selectParadaG(String codi) {
-
+		
 		if (codi == null) {
 			System.out.println("\nCodi de la parada gastronòmica?:");
 			codi = DADES.next();

@@ -1,11 +1,13 @@
-package Principal;
+package principal;
+
+import java.util.Arrays;
 
 import java.util.Scanner;
-import java.util.Arrays;
-import locals.ParadaG;
-import locals.PuntInformacio;
-import locals.ParadaV;
 
+/**
+ *
+ * @author Palmira
+ */
 public class Application {
 
 	private static final Scanner DADES = new Scanner(System.in);
@@ -149,24 +151,16 @@ public class Application {
 			case 2:
 				int pos = mercatActual.selectPuntInformacio(null);
 				if (pos != -1) {
-					PuntInformacio[] punts = mercatActual.getPuntsInformacio();
-					punts[pos].updatePuntInformacio();
+					mercatActual.getPuntsInformacio()[pos].updatePuntInformacio();
+
 				} else {
 					System.out.println("Aquest Punt d'Informació no existeix");
 				}
 				break;
 			case 3:
 
-				/*
-				 * PuntInformacio[] punts = mercatActual.getPuntsInformacio(); for (int i = 0; i
-				 * < punts.length; i++) { if (punts[i] != null) { punts[i].showPuntInformacio();
-				 * } }
-				 */
-
-				for (PuntInformacio punts : mercatActual.getPuntsInformacio()) {
-					if (punts != null) {
-						punts.showPuntInformacio();
-					}
+				for (int i = 0; i < mercatActual.getpPuntsInformacio(); i++) {
+					mercatActual.getPuntsInformacio()[i].showPuntInformacio();
 				}
 
 				break;
@@ -218,17 +212,15 @@ public class Application {
 			case 2:
 				int pos = mercatActual.selectParadaG(null);
 				if (pos != -1) {
-					ParadaG[] parades = mercatActual.getParadesG();
-					parades[pos].updateParadaG();
+					mercatActual.getParadesG()[pos].updateParadaG();
+
 				} else {
 					System.out.println("Aquests Parada Gastronòmica no existeix");
 				}
 				break;
 			case 3:
-				for (ParadaG parades : mercatActual.getParadesG()) {
-					if (parades != null) {
-						parades.showParadaG();
-					}
+				for (int i = 0; i < mercatActual.getpParadesG(); i++) {
+					mercatActual.getParadesG()[i].showParadaG();
 				}
 				break;
 
@@ -276,18 +268,15 @@ public class Application {
 				break;
 			case 2:
 				int pos = mercatActual.selectParadaV(null);
-				if (pos != -1) {
-					ParadaV[] parades = mercatActual.getParadesV();
-					parades[pos].updateParadaV();
+				if (pos != 1) {
+					mercatActual.getParadesV()[pos].updateParadaV();
 				} else {
 					System.out.println("Aquesta Parada de Venda no existeix.");
 				}
 				break;
 			case 3:
-				for (ParadaV parades : mercatActual.getParadesV()) {
-					if (parades != null) {
-						parades.showParadaV();
-					}
+				for (int i = 0; i < mercatActual.getpParadesV(); i++) {
+					mercatActual.getParadesV()[i].showParadaV();
 				}
 				break;
 
@@ -310,5 +299,4 @@ public class Application {
 		}
 		return -1;
 	}
-
 }

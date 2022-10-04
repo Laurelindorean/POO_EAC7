@@ -1,9 +1,17 @@
+/*
+* Classe que defineix una parada de venda del mercat. Es defineixen pel seu codi, 
+* nom i tipus de productes que ofereix.
+ */
 package locals;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author Palmira
+ */
 public class ParadaV {
-	
+
 	private static final Scanner DADES = new Scanner(System.in);
 	private String codi;
 	private String nom;
@@ -72,8 +80,8 @@ public class ParadaV {
 
 		System.out.println("Introdueix el codi de la Parada de Venda");
 		codi = DADES.next();
-		System.out.println("Introdueix el nom de la Parada de Venda");
 		DADES.nextLine();
+		System.out.println("Introdueix el nom de la Parada de Venda");
 		nom = DADES.nextLine();
 		System.out.println("Introdueix el tipus de la Parada de Venda");
 		tipus = DADES.nextLine();
